@@ -71,7 +71,6 @@ import checkPosition from './checkPosition.js';
 
         break;
   }
-    // var rect = t.getBoundingClientRect();
-    // console.log(rect.top, rect.left, rect.bottom, rect.right);
+
   });
 })();
