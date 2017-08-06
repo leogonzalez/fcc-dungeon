@@ -17,8 +17,13 @@
   border: 1px solid #000;
 }
 
+#board:focus {
+  outline: none;
+}
+
 .player {
   background-color: rgba(25,25,210,0.7);
+  border-radius: 50%;
 }
 
 .wall {

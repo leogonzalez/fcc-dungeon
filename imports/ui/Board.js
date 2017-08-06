@@ -9,24 +9,28 @@ export default class Board extends React.Component {
     this.state = {
       playerPos:25
     };
+    this.movePlayer = this.movePlayer.bind(this);
   }
-  movePlayer(){
-    let newState = {};
-    document.addEventListener('keydown',(e) => {
-      switch (e.code) {
-        case 'ArrowDown':
-          const position = this.state.playerPos + 18;
-          this.setState({playerPos:position});
-          newState.playerPos = position;
-          break;
-      }
-    });
-
+  movePlayer(event){
+    switch (event.key) {
+      case 'ArrowUp':
+        this.setState((prevState) => ({playerPos:prevState.playerPos -18}));
+        break;
+      case 'ArrowDown':
+        this.setState((prevState) => ({playerPos:prevState.playerPos +18}));
+        break;
+      case 'ArrowLeft':
+        this.setState((prevState) => ({playerPos:prevState.playerPos -1}));
+        break;
+      case 'ArrowRight':
+        this.setState((prevState) => ({playerPos:prevState.playerPos +1}));
+        break;
+    }
   }
   render(){
-    this.movePlayer();
+
     return (
-      <div id='board'>
+      <div id='board' onKeyDown={this.movePlayer} tabIndex='0'>
 
       {
         board.map((x,i) => {

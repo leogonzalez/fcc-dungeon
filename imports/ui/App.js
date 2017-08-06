@@ -1,7 +1,7 @@
 import React from 'react';
 import Board from './Board.js';
 import Stats from './Stats.js';
-// import './moveFunc.js';
+
 
 export default class App extends React.Component {
   render(){
