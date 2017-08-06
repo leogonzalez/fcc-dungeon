@@ -1,31 +1,28 @@
 /* CSS declarations go here */
 
+.tile {
+  height: 23px;
+  width: 23px;
+  border: 1px solid #eee;
+  float: left;
+  font-size: 8pt;
+  color: #bbb;
+}
+
 #board {
   position: relative;
   display: block;
-  height: 447px;
-  width: 447px;
+  height: 425px;
+  width: 450px;
   border: 1px solid #000;
 }
 
-#player1 {
-  position: absolute;
-  display: block;
-  height: 15px;
-  width: 15px;
-  border: 1px solid #000;
+.player {
   background-color: rgba(25,25,210,0.7);
-  overflow: hidden;
 }
 
-#wall {
-  position: relative;
-  display: block;
-  height: 148px;
-  width: 68px;
+.wall {
   background-color: rgba(25,25,25,0.7);
-  top: 120px;
-  left: 120px;
 }
 
 .line p{
